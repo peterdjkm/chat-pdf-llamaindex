@@ -34,8 +34,8 @@ export default withSentryConfig(
 
     // Suppresses source map uploading logs during build
     silent: true,
-    org: "llamaindex",
-    project: "chat-llamaindex",
+    org: "self",
+    project: "chat-pdf-llamaindex",
   },
   {
     // For all available options, see:
