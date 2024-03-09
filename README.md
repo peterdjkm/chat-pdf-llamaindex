@@ -4,4 +4,5 @@
 
 ## 🙏 Thanks
 
-Thanks go to @Yidadaa for his [ChatGPT-Next-Web](https://github.com/Yidadaa/ChatGPT-Next-Web) project, which was used as a starter template for this project.
+Thanks to @Yidadaa for his [ChatGPT-Next-Web](https://github.com/Yidadaa/ChatGPT-Next-Web) project.
+Thanks to [Run-Llama/chat-llamaindex] (https://github.com/run-llama/chat-llamaindex) project.
