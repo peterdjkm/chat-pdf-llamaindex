@@ -5,7 +5,7 @@ import { ModelType } from "@/app/client/platforms/llm";
 import { createEmptySession } from "../store";
 
 const TEMPLATE = (PERSONA: string) =>
-  `I want you to act as a ${PERSONA}. I will provide you with the context needed to solve my problem. Use intelligent, simple, and understandable language. Be concise. It is helpful to explain your thoughts step by step and with bullet points.`;
+  `I want you to act as a ${PERSONA}. I will provide you with the context needed. Use intelligent, simple, and understandable language. Be concise. You are a financial analyst and was asked to prepare a brief note on a matter. Responses should be based on the facts, data, numbers only from the above supplied material. Check your responses twice before answering. Never hallucinate. Use a narrative style.`;
 
 type DemoBot = Omit<Bot, "session">;
 
@@ -42,27 +42,6 @@ export const DEMO_BOTS: DemoBot[] = [
   },
   {
     id: "3",
-    avatar: "1f5a5-fe0f",
-    name: "Red Hat Linux Expert",
-    botHello: "Hello! How can I help you with Red Hat Linux?",
-    context: [
-      {
-        role: "system",
-        content: TEMPLATE("Red Hat Linux Expert"),
-      },
-    ],
-    modelConfig: {
-      model: "gpt-4-1106-preview",
-      temperature: 0.1,
-      maxTokens: 4096,
-      sendMemory: true,
-    },
-    readOnly: true,
-    datasource: "redhat",
-    hideContext: false,
-  },
-  {
-    id: "4",
     avatar: "1f454",
     name: "Apple Watch Genius",
     botHello: "Hello! How can I help you with Apple Watches?",
@@ -80,27 +59,6 @@ export const DEMO_BOTS: DemoBot[] = [
     },
     readOnly: true,
     datasource: "watchos",
-    hideContext: false,
-  },
-  {
-    id: "5",
-    avatar: "1f4da",
-    name: "German Basic Law Expert",
-    botHello: "Hello! How can I assist you today?",
-    context: [
-      {
-        role: "system",
-        content: TEMPLATE("Lawyer specialized in the basic law of Germany"),
-      },
-    ],
-    modelConfig: {
-      model: "gpt-4-1106-preview",
-      temperature: 0.1,
-      maxTokens: 4096,
-      sendMemory: true,
-    },
-    readOnly: true,
-    datasource: "basic_law_germany",
     hideContext: false,
   },
 ];
