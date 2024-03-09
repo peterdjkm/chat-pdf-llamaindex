@@ -1,6 +1,6 @@
 {
-  "name": "chat-llamaindex",
-  "short_name": "Llama Chat",
+  "name": "chat-pdf-llamaindex",
+  "short_name": "Chat PDF",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
