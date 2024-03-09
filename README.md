@@ -1,5 +1,4 @@
-<br /><br />
-
+<br />
 <h3 align="center"><b>LlamaIndex Chat App</b></h3>
 
 ## 🙏 Thanks
