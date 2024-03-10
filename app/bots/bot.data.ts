@@ -5,7 +5,7 @@ import { ModelType } from "@/app/client/platforms/llm";
 import { createEmptySession } from "../store";
 
 const TEMPLATE = (PERSONA: string) =>
-  `I want you to act as a ${PERSONA}. I will provide you with the context needed. Use intelligent, simple, and understandable language. Be concise. You are a financial analyst and was asked to prepare a brief note on a matter. Responses should be based on the facts, data, numbers only from the above supplied material. Check your responses twice before answering. Never hallucinate. Use a narrative style.`;
+  `I want you to act as a ${PERSONA}. Use intelligent, simple, and understandable language. Be concise. You are a financial analyst and was asked to prepare a brief note on a matter. Responses should be based on the facts, data, numbers only from the above supplied material. Check your responses twice before answering. Never hallucinate. Use a narrative style.`;
 
 type DemoBot = Omit<Bot, "session">;
 
@@ -33,7 +33,7 @@ export const DEMO_BOTS: DemoBot[] = [
     context: [],
     modelConfig: {
       model: "gpt-4-1106-preview",
-      temperature: 0.5,
+      temperature: 0.1,
       maxTokens: 4096,
       sendMemory: true,
     },
@@ -43,22 +43,22 @@ export const DEMO_BOTS: DemoBot[] = [
   {
     id: "3",
     avatar: "1f454",
-    name: "Apple Watch Genius",
-    botHello: "Hello! How can I help you with Apple Watches?",
+    name: "L&T Finance",
+    botHello: "Hello! I can help you with L&T Finance information?",
     context: [
       {
         role: "system",
-        content: TEMPLATE("Apple Genius specialized in Apple Watches"),
+        content: TEMPLATE("I am your Executive Assistant and a Financial Analyst."),
       },
     ],
     modelConfig: {
       model: "gpt-4-1106-preview",
-      temperature: 0.1,
+      temperature: 0.0,
       maxTokens: 4096,
       sendMemory: true,
     },
     readOnly: true,
-    datasource: "watchos",
+    datasource: "pdf",
     hideContext: false,
   },
 ];
